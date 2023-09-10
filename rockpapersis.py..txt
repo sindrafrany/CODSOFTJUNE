@@ -1,0 +1,51 @@
+# import the Python Random module
+import random
+
+# get player's choice and store to a variable
+choice = input("Select either rock, paper, or scissors:")
+
+# remove whitespace from player's choice
+# convert string to all lowercase
+userChoice = choice.strip().lower()
+
+# print the player's choice
+print("You picked: " + userChoice)
+
+# generate a random number between 0 to 2
+randomNumber = random.randint(0, 2)
+
+# print the random number
+# print(randNum)
+
+# if the number is 0, assign "rock" to the opponent variable (i.e. opponent picks "rock")
+if (randomNumber == 0):
+    opponent = "rock"
+    print("Opponent picked: " + opponent)
+    if (userChoice == "rock"):
+        print("Draw!")
+    elif (userChoice == "paper"):
+        print("You win!")
+    elif (userChoice == "scissors"):
+        print("You lose!")
+
+# if the number is 1, assign "paper" to the opponent variable (i.e. opponent picks "paper")
+elif (randomNumber == 1):
+    opponent = "paper"
+    print("Opponent picked: " + opponent)
+    if (userChoice == "rock"):
+        print("You lose!")
+    elif (userChoice == "paper"):
+        print("Draw!")
+    elif (userChoice == "scissors"):
+        print("You win!")
+
+# if the number is 2, assign "scissors" to the opponent variable (i.e. opponent picks "scissors")
+else:
+    opponent = "scissors"
+    print("Opponent picked: " + opponent)
+    if (userChoice == "rock"):
+        print("You win!")
+    elif (userChoice == "paper"):
+        print("You lose!")
+    elif (userChoice == "scissors"):
+        print("Draw!")
